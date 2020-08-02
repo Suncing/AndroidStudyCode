@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListViewActivity">
+    <Button
+        android:id="@+id/simple"
+        android:onClick="turnListViewSimple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="简单实现" />
+    <Button
+        android:id="@+id/difficult"
+        android:onClick="turnListViewDifficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="复杂用法"/>
+    <Button
+        android:onClick="turnArrayAdapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arrayAdapter使用"
+        android:textAllCaps="false"/>
+    <Button
+        android:onClick="turnSimpleAdapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="turnSimpler使用"
+        android:textAllCaps="false"/>
+
+
+</LinearLayout>

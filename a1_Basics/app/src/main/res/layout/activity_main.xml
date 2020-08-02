@@ -4,12 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
     <Button
-        android:id="@+id/btn_toast"
+        android:onClick="turnCall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试吐司"/>
+        android:text="测试拨打电话"/>
+    <Button
+        android:onClick="turnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击四种方法"/>
+    <Button
+        android:onClick="turnActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试ActionBar"
+        android:textAllCaps="false"/>
+    <Button
+        android:onClick="turnListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试ListView"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

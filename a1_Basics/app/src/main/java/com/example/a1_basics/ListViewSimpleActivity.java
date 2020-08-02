@@ -11,10 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ListViewSimple extends AppCompatActivity {
+public class ListViewSimpleActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listview);
+        setContentView(R.layout.activity_list_view_simple);
 
         ListView lv = findViewById(R.id.lv);//找到我们关心的控件
         lv.setAdapter(new MyListenerAdapter());//数据来源于适配器，和其他普通控件textview有区别
@@ -40,20 +40,21 @@ public class ListViewSimple extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View view, ViewGroup viewGroup) {
+        public View getView(int position, View convertView, ViewGroup viewGroup) {
             TextView tv;
 
 //            1.这样会报警告，因为吃内存
 //            Log.d("ListViewTest",":"+position);
 //            tv = new TextView(ListViewTest.this);
 //            tv.setText("哈哈"+position);
-//
-//            2.使用对象复用，解决
-            if(view == null){
-                tv = new TextView(ListViewSimple.this);
+
+//            2.使用对象复用，解决。
+//            convertView就是历史缓存对象
+            if(convertView == null){
+                tv = new TextView(ListViewSimpleActivity.this);
                 Log.d("ListViewTest",":新对象"+position);
             }else{
-                tv= (TextView) view;
+                tv= (TextView) convertView;
                 Log.d("ListViewTest",":复用历史对象对象"+position);
             }
             tv.setText("哈哈"+position);

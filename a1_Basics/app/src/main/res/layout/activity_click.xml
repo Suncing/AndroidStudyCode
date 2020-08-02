@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClickActivity">
+    <Button
+        android:onClick="testOnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第一种"/>
+    <Button
+        android:id="@+id/secondClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第二种"/>
+    <Button
+        android:id="@+id/thridClick1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第三种1"/>
+    <Button
+        android:id="@+id/thridClick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第三种2"/>
+    <Button
+        android:id="@+id/fourthClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第四种"/>
+
+</LinearLayout>

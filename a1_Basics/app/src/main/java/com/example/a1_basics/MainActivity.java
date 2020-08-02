@@ -4,25 +4,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.Button;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button btn_toast = this.findViewById(R.id.btn_toast);
-        btn_toast.setOnClickListener(new ToastClickListener());
-
     }
-    private class ToastClickListener implements View.OnClickListener{
-        public void onClick(View view) {
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this,TestToast.class);
-            startActivity(intent);
-        }
+
+
+    public void turnCall(View view) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,CallActivity.class);
+        startActivity(intent);
+    }
+
+    public void turnClick(View view) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,ClickActivity.class);
+        startActivity(intent);
+    }
+
+    public void turnActionBar(View view) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ActionBarActivity.class);
+        startActivity(intent);
+    }
+
+    public void turnListView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ListViewActivity.class);
+        startActivity(intent);
     }
 }
