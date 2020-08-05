@@ -28,5 +28,13 @@
         android:layout_height="wrap_content"
         android:text="测试ListView"
         android:textAllCaps="false"/>
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/love"/>
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Text"/>
 </LinearLayout>
