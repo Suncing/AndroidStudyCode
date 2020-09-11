@@ -1,5 +1,5 @@
 # AndroidStudyCode
-study Android recode
+安卓学习代码
 
 
 git准备流程：
